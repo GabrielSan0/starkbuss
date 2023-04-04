@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    background-color: antiquewhite;
+}
+
+.logo{
+    max-width: 5rem;
+}
+.nav-list{
+    display: flex;
+    list-style-type: none; /*para quitarle el puntito de la lista*/
+    gap: 1rem;
+}
+.nav-list li a {
+    text-decoration: none; /*quita la linea de los elementos li*/
+    color: #1c1c1c;
+}
+.abrir-menu{
+    display: none;
+}
+.cerrar{
+    display: none;
+}
+
+@media screen and (max-width: 550px) { /*fojarse bien los espacios al detalle*/
+    .abrir-menu, .cerrar {
+        display: block;
+        border: 0;
+        font-size: 1.3rem;
+        background-color: transparent
+    }
+.abrir-menu{
+    color: black;
+}
+.cerrar{
+    color: #fff;
+}
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+
+        display: flex;
+        align-items: end;
+        gap: 1rem;
+        flex-direction: column;
+        position: absolute;
+        top: 0; /*para que inicie desde arriba*/
+        right: 0;/*para que este ala derecha*/
+        bottom: 0; /*para que llegue hasta el final abajo*/
+        background-color: #1c1c1c;
+        padding: 2rem; /*para que no este tan pegado al borde*/
+        box-shadow: 0 0 0 100vmax rgba(0 ,0, 0, .5) /*le da un tono oscuro a toda la pantalla*/
+    }
+    
+    .nav-visibiliti{
+        opacity: 1;
+        visibility: visible;
+    }
+    .nav-list {
+        flex-direction: column;
+        align-items: end; /*para que los elementos de vayan a la derecha*/
+    }
+    .nav-list li a {
+        
+        color: #fff;
+    }
+
+
+
+    
+
+}
+
+
